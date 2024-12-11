@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> css selectors</title>
+    <style>
+       /* for desendent */
+        div p {  
+            background-color: blue;
+            color: violet;
+        }
+
+        /* for child  */
+        div>p {
+            background-color: red;
+        }
+
+        p:first-child{
+background-color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <P>hello</P>
+    </div>
+
+   
+     <div>
+        <article>
+            <p>
+                for desendent 
+            </p>
+        </article>
+     </div>
+
+     <div>
+        <article>
+            <p>
+                on this the child selector will not world
+            </p>
+            <p>ths is second child ,so firstchild selector will not for this</p>
+        </article>
+     </div>
+
+
+</body>
+</html>
