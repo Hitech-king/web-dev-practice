@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cal</title>
+    <style>
+        body{
+            text-align: center;
+            margin: 50px;
+        }
+        button{
+            width: 50px;
+            height: 50px;
+            margin: 5px auto;
+            background-color: aqua;
+
+        }
+        input{
+            width: 200px;
+            height: 25px ;
+            margin: 5px auto;
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>simple cal</h1>
+    <div class="calculator">
+        <input type="text" id="result" readonly>
+        <br>
+        <button onclick="append('1')">1</button>
+        <button onclick="append('2')">2</button>
+        <button onclick="append('3')">3</button>
+        <button onclick="append('+')">+</button>
+        <br>
+        <button onclick="append('4')">4</button>
+        <button onclick="append('5')">5</button>
+        <button onclick="append('6')">6</button>
+        <button onclick="append('-')">-</button>
+        <br>
+        <button onclick="append('7')">7</button>
+        <button onclick="append('8')">8</button>
+        <button onclick="append('9')">9</button>
+        <button onclick="append('*')">*</button>
+        <br>
+        <button onclick="append('0')">0</button>
+        <button onclick="append('.')">.</button>
+        <button onclick="calculate('=')">=</button>
+        <button onclick="append('/')">/</button>
+        <br>
+        <button onclick="clearReasult()">C</button>
+    </div>
+
+    <script>
+        function append(value){
+            document.getElementById('result').value += value;
+        }
+
+        function calculate(){
+            try{
+                document.getElementById('result').value = eval(document.getElementById('result').value);
+            } catch(e){
+                alert('Invalid Expression');
+            }
+        }
+
+
+        function clearReasult(){
+            document.getElementById('result').value = '';
+        }
+
+    </script>
+</body>
+</html>
