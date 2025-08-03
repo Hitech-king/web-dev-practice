@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            min-height: 100vh;
+            min-width: 100vw;
+            margin: 0;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center; 
+        }
+    </style>
+</head>
+<body >
+<script>
+    let div = document.createElement('div')
+    div.className = 'days'
+    div.id = "day"
+    div.style.backgroundColor = 'green'
+    div.style.padding = '12px'
+    div.style.margin = '5px'
+    div.style.width= '30vw'
+    // 1. one way to add text 
+    // div.innerText = "monday"
+    // 2. another way to add
+    const addText = document.createTextNode('monday')
+    div.appendChild(addText)
+    // this is optimized -- 
+    // as innerHTML travers tree every time to get the reference 
+
+
+    document.body.appendChild(div)
+
+
+    function createDiv(day,color){
+        let div = document.createElement('div')
+        div.className = 'days'
+        div.id =day
+        div.style.backgroundColor = color
+        div.style.padding = '12px'
+        div.style.margin = '5px'
+        div.style.width= '30vw'
+        // div.innerText = day
+
+        const addText = document.createTextNode(`${day}`)
+        div.appendChild(addText)
+        // div.appendChild(document.createTextNode(`${day}`))
+
+    
+        document.body.appendChild(div)
+
+
+
+    }
+
+    createDiv('monday','red');
+
+        let color = ['red','pink','green','blue','purple','aqua']
+        let days  = ['sunday','monday','saturday','Tuesday','wednesday','thursday']
+
+        for (let i = 0; i < days.length; i++) {
+            createDiv(days[i],color[i]);       
+        }
+
+
+
+</script>
+</body>
+</html>

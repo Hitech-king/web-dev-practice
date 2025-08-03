@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id="mainDiv" class="mDiv">
+        <h1 class="heading">
+            Welcome
+        </h1>
+        <h1 class="heading">
+            Welcome2
+        </h1>
+        <h1 class="heading">
+            Welcome3
+        </h1>
+    
+        <p id="one">ekmcdmcm</p>
+    </div>
+
+    <div class="parent">
+        <div class="date">1</div>
+        <div class="date">2</div>
+        <div class="date">3</div>
+        <div class="date">4</div>
+    </div>
+
+   <script>
+        let parent = document.querySelector('.parent')  
+        console.log(parent);
+        console.log(parent.children[2].innerHTML);
+        console.log(parent.firstChild);
+        parent.children[0].style.color= 'red';
+        console.log(parent.childNodes);
+
+
+        
+        
+              
+
+    </script> 
+</body>
+
+</html>
+
+<!-- innertext  --- gives only visible taxt ,no HTML  -->
+ <!-- textContent  -- give all the text , invisible too , no HTML-->
+  <!-- innerHTML ---give HTML in that too ,if any present there -->

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+
+    <script>
+        // const first = document.querySelector("li:first-child")
+        // first.remove()
+
+        // or 
+
+        // const third = document.querySelector("li:nth-child(3)")
+        // third.remove()
+
+        // function to remove element
+
+        function remover (num){
+           
+            const element = document.querySelector(`li:nth-child(${num})`)
+            element.remove()
+        }
+
+        remover(1);
+
+    </script>
+</body>
+</html>
