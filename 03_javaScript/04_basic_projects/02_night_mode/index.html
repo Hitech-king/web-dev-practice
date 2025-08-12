@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque facere eaque corrupti ducimus nobis labore nesciunt temporibus sunt. Adipisci veniam quos facilis excepturi eaque odio amet, fugit error similique. Suscipit odit sapiente at repellat, sit soluta obcaecati pariatur hic facilis rem nam laboriosam earum voluptatem.</p>
+    </div>
+
+    <div>
+        <ul>
+            <li>1</li>
+            <li>3</li>
+            <li>6</li>
+        </ul>
+    </div>
+
+    <button class="button" id="black">
+        night 
+    </button>
+    <button class="button" id="white">
+        day
+    </button>
+
+
+    <script>
+        const buttons = document.querySelectorAll('button');
+        const body = document.querySelector('body')
+        buttons.forEach((button) => {
+    button.addEventListener('click', (e) => {
+        // console.log(e)
+        // console.log(e.target);
+        if (e.target.id === 'black') {
+            body.style.backgroundColor = e.target.id;
+            body.style.color = 'white';
+
+        }
+        if (e.target.id === 'white') {
+            body.style.backgroundColor = e.target.id;
+            body.style.color = 'black';
+        }
+        
+
+    })
+
+});
+
+
+    </script>
+</body>
+</html>

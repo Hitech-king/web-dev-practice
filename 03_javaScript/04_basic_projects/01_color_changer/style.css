@@ -1,0 +1,60 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.mainDiv {
+    display: flex;
+    flex-direction: row;
+}
+
+.button {
+    height: 40px;
+    width: 40px;
+    border: 2px solid black;
+    margin: 5px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+#purple {
+    background-color: purple;
+    color: white;
+}
+
+#white {
+    background-color: white;
+    color: black;
+}
+
+#pink {
+    background-color: pink;
+    color: black;
+}
+
+#green {
+    background-color: green;
+    color: white;
+}
+
+#red {
+    background-color: red;
+    color: white;
+}
+
+#yellow {
+    background-color: yellow;
+    color: black;
+}
+
+#aqua {
+    background-color: aqua;
+    color: black;
+}

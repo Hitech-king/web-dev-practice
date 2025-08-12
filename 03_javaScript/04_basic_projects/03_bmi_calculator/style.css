@@ -1,0 +1,37 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+    
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    width: 50vw;
+
+   
+}
+
+.form{
+    /* height: 40%;
+    width: 50%; */
+    background-color: aqua;
+    padding: 10px;
+    margin: 5px;
+    box-sizing: border-box;
+}
+
+.guide{
+    /* height: 40%;
+        width: 50%;  */
+    background-color: antiquewhite;
+    padding: 10px;
+    font-size: large;
+}
