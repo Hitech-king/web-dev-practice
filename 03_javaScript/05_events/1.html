@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <ul id="list">
+            <li id="hitesh">  Hitesh</li>
+            <li id="jay">Jay</li>
+            <li id="ajay">Ajay</li>
+            <a href="www.google.com" id="google">google</a>
+        </ul>
+    </div>
+</body>
+<script>
+    // this method not provied much .
+
+    // document.getElementById("Hitesh").onclick = function(){
+    //     alert("clicked Hitesh")
+    // }
+
+    // so we use this one
+
+    // document.getElementById("hitesh").addEventListener('click', function(e){
+    //     console.log(e)
+    // },false)
+
+    // for Event propagation  --> false -- Event Bubbling (Bubbling Up)  true -- Event Capturing (Trickling Down)
+
+    // document.getElementById("list").addEventListener('click', function(e){
+    //     console.log("clicked a list item")
+    // },false)
+    // document.getElementById("hitesh").addEventListener('click', function(e){
+    //     console.log("Hitesh")
+    //     e.stopPropagation(); 
+    //     // to stop the propagtion of going up
+    // },false)
+
+    // document.getElementById("list").addEventListener('click', function(e){
+    //     console.log("clicked a list item")
+    // },true)
+    // document.getElementById("hitesh").addEventListener('click', function(e){
+    //     console.log("Hitesh")
+    // },true)
+
+    // document.getElementById("google").addEventListener('click', function(e){
+    //     console.log("google clicked")
+    //     e.preventDefault();
+        
+    // },false)
+
+    // to remove a element by clicking it 
+
+
+    document.querySelector("#list").addEventListener('click', function(e){
+        // console.log(e.target);
+        let removeIT = e.target
+        console.log(e.target.tagName);
+        if(e.target.tagName === 'LI'){
+            removeIT.remove();
+        }
+        
+        // 1st method
+        // removeIT.remove();
+        
+
+        // 2nd method
+        // removeIT.parentNode.removeChild(removeIT)
+        
+    },false)
+
+
+
+</script>
+</html>

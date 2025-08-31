@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #time {
+            font-size: 2rem;
+            color: #333;
+            margin: 20px 0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Stopwatch</h1>
+    <div id="time">Press Start to begin</div>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <button id="reset">Reset</button>
+
+    <script>
+        const timeDisplay = document.getElementById("time");
+
+        let intervalId = null;
+        let secondsPassed = 0;
+
+        function updateTime() {
+            timeDisplay.textContent = `Time Elapsed: ${secondsPassed} second${secondsPassed !== 1 ? 's' : ''}`;
+            secondsPassed++;
+        }
+
+        document.getElementById('start').addEventListener('click', function() {
+            if (intervalId === null) {
+                intervalId = setInterval(updateTime, 1000);
+            }
+        });
+
+        document.getElementById('stop').addEventListener('click', function() {
+            clearInterval(intervalId);
+            intervalId = null;
+        });
+
+        document.getElementById('reset').addEventListener('click', function() {
+            clearInterval(intervalId);
+            intervalId = null;
+            secondsPassed = 0;
+            timeDisplay.textContent = "Press Start to begin";
+        });
+    </script>
+</body>
+</html>
